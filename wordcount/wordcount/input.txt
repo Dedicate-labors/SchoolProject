@@ -1,0 +1,4 @@
+hello word!
+how are you?
+file is being open.
+now please close it.
