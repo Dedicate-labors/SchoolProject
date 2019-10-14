@@ -11,15 +11,6 @@ using namespace std;
 int flag[4] = { 0 }, sum=0;
 vector<string> pd(4);
 
-/*
-wordCount.exe -i input.txt //ok
-wordCount.exe -m [number]
-wordCount.exe -n [number]
-wordCount.exe -n 1 -i input.txt
-wordCount.exe -o output.txt// ok
-wordCount.exe -i input.txt -m 5 -n 3 -o output.txt
--i 和 -o 一定出现
-*/
 
 int CheckArgs()
 {
@@ -27,12 +18,12 @@ int CheckArgs()
 		cout << "请输入正确的参数格式" << endl;
 		exit(-1);
 	} 
-	if(!flag[0]&&pd[0] != "input.txt") 
+	if(!flag[0] || pd[0] != "input.txt") 
 	{
 		cout << "请输入正确文件名" << endl;
 		exit(-1);
 	}
-	if(!flag[4])
+	if(!flag[3])
 	{     
 		cout << "请输入正确输出文件" << endl;
 		exit(-1);
